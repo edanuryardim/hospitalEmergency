@@ -58,7 +58,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/api/available-beds/{roomId}', [RoomsController::class, 'getAvailableBeds']);
 
     Route::get('/chat', [ChatController::class, 'chat'])->name('chat');
-    Route::post('/chatsend', [ChatController::class, 'chatsend'])->name('chatsend');
+    Route::post('/chat', [ChatController::class, 'chatsend'])->name('chat');
 
     //users
     Route::get('/users', [UserController::class, 'users'])->name('users');
